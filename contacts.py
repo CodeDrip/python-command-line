@@ -17,6 +17,8 @@ class Contact(BaseModel):
     address = CharField()
  
 db.connect()
+db.drop_tables([Contact])
+db.create_tables([Contact])
  
 def hello():
     print('Contact Book COntrols \n 1: See Contacts \n 2: Make Contact \n 3: Update Contact \n 4: Delete Contact \n 5: Exit')
