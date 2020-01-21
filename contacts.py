@@ -14,14 +14,14 @@ class Contact(BaseModel):
     birthday = DateField()
     phone = CharField()
     email = CharField()
-    address = CharField()
+    # address = CharField()
  
 db.connect()
-# db.drop_tables([Contact])
-# db.create_tables([Contact])
+db.drop_tables([Contact])
+db.create_tables([Contact])
  
 def hello():
-    print('Contact Book COntrols \n 1: See Contacts \n 2: Make Contact \n 3: Update Contact \n 4: Delete Contact \n 5: Exit')
+    print('Contact Book Controls \n 1: See Contacts \n 2: Make Contact \n 3: Update Contact \n 4: Delete Contact \n 5: Exit')
     greet = input('Enter the number of what you want to do: ')
     if greet == '1':
         show_contact()
